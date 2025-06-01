@@ -4,6 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AIPhotoReddit</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #cee3f8;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box; /* Ensures padding doesn't add to width */
+      z-index: 1000; /* Keep top bar on top */
+      height: 50px; /* Fixed height for top-bar */
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff4500;
+    }
+    .search-bar {
+      margin-left: 20px; /* Space from logo */
+      width: 300px;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    .body-container {
+      display: flex;
+      padding-top: 50px; /* Space for the fixed top bar */
+    }
+    .sidebar {
+      width: 250px;
+      min-width: 250px; /* Prevent shrinking too much */
+      background-color: #f0f0f0;
+      height: calc(100vh - 50px); /* Full viewport height minus top bar */
+      padding: 10px;
+      box-sizing: border-box;
+      border-right: 1px solid #ddd;
+    }
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      box-sizing: border-box;
+      /* Potentially add overflow-y: auto; if content is expected to scroll */
+    }
+    /* Adjust default App.js styling if needed */
+    .App-header {
+      background-color: #fff; /* Assuming we want a white background for the content area */
+      color: #282c34; /* Default create-react-app color, change as needed */
+      padding: 20px;
+      text-align: left; /* Align text to left instead of center */
+    }
+    .App-header h1 {
+        margin-top: 0; /* Remove default h1 margin if it causes layout issues */
+    }
+  </style>
 </head>
 <body>
   <div id="root"></div>
