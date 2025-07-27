@@ -1,24 +1,25 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import PostDetailPage from '../pages/PostDetailPage';
+import AdminPage from '../pages/AdminPage';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <div className="top-bar">
-        <div className="logo">Logo</div>
-        <input type="text" className="search-bar" placeholder="Search" />
-      </div>
-      <div className="body-container">
-        <div className="sidebar">
-          {/* Sidebar content will go here */}
+        <div className="logo">
+          <a href="/">📸 PhotoReddit</a>
         </div>
-        <div className="main-content">
-          <header className="App-header">
-            <h1>Hello, World!</h1>
-            <p>Welcome to AIPhotoReddit</p>
-          </header>
-          {/* Other main content will go here */}
-        </div>
+        <input type="text" className="search-bar" placeholder="Search photos..." />
       </div>
+      
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/post/:id" element={<PostDetailPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+      </Routes>
     </div>
   );
 }

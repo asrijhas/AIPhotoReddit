@@ -4,10 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server/index.js",
-    "dev": "nodemon src/server/index.js",
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon src/server/index.js",
+    "client": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
+    "dev-server": "nodemon src/server/index.js",
+    "dev-client": "webpack serve --mode development"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +18,16 @@
   "dependencies": {
     "express": "^4.21.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.1.0",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0",
+    "react-router-dom": "^6.22.0",
+    "sqlite3": "^5.1.7",
+    "multer": "^1.4.5-lts.1",
+    "cors": "^2.8.5",
+    "axios": "^1.6.7",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.26.9",
@@ -25,6 +36,12 @@
     "babel-loader": "^10.0.0",
     "nodemon": "^3.1.9",
     "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.0.2",
+    "css-loader": "^6.10.0",
+    "style-loader": "^3.3.4",
+    "html-webpack-plugin": "^5.6.0",
+    "concurrently": "^8.2.2",
+    "@redux-devtools/extension": "^3.3.0"
   }
 }

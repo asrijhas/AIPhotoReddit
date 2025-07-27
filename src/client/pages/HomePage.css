@@ -1,0 +1,149 @@
+/* HomePage Styles */
+.home-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 70px;
+}
+
+.sidebar-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+}
+
+.subreddit-list {
+  margin-bottom: 20px;
+}
+
+.subreddit-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #edeff1;
+}
+
+.subreddit-item:last-child {
+  border-bottom: none;
+}
+
+.subreddit-item a {
+  color: #1c1c1c;
+  font-size: 14px;
+  display: block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.subreddit-item a:hover {
+  background-color: #f6f7f8;
+}
+
+.create-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4500;
+  color: white;
+  text-align: center;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.create-button:hover {
+  background-color: #cc3700;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.feed {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.feed h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background-color: #ffffff;
+  border: 1px solid #edeff1;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-info {
+  padding: 16px;
+}
+
+.post-caption {
+  font-size: 14px;
+  color: #1c1c1c;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.post-subreddit {
+  font-size: 12px;
+  color: #7c7c7c;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+} 
