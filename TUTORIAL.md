@@ -5,7 +5,7 @@ Welcome to the PhotoReddit tutorial! This guide will help you build a Reddit-lik
 ## 📋 Prerequisites
 
 Before starting, make sure you have:
-- [ ] Node.js installed (version 14 or higher)
+- [*] Node.js installed (version 14 or higher)
 - [ ] A code editor (VS Code recommended)
 - [ ] Basic understanding of programming concepts (variables, functions, loops)
 
